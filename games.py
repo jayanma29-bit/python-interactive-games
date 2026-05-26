@@ -261,7 +261,7 @@ def game_choice():
                 "(2.) Number Guessing\n"
                 "(3.) Even or Odd\n" \
                 "(4.) Game of Pigs\n" \
-                "(5.) Cordinate Difference\n"
+                "(5.) Coordinate Difference\n"
                 "(6.) Tic Tac Toe\n\n"
                 "Enter the number: ").strip().lower()
 
@@ -280,7 +280,7 @@ def game_choice():
                 print("\nYou have chosen the Game of Pigs!" )
                 last_game = game_of_pig
             elif user_input in ["5", "five"]:
-                print("\nYou have chosen the Cordinate difference!" )
+                print("\nYou have chosen the Coordinate difference!" )
                 last_game = cord_diff
             elif user_input in ["6", "six"]:
                 last_game = tic_tac_toe
