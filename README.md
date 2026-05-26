@@ -10,7 +10,7 @@ This was my very first python project made which focuses on core concepts such a
 | 2 | **Number Guessing** | Guess a random number between 1–100 with hints |
 | 3 | **Even or Odd** | Check whether any number is even or odd |
 | 4 | **Coordinate Difference** | Calculate the distance between two points on a coordinate plane |
-| 5 | **Game of Pig** | Dice game vs. the computer the first to 100 points wins  race to 100 points |
+| 5 | **Game of Pig** | Dice game vs. the computer the first to 100 points wins |
 | 6 | **Tic Tac Toe** | Traditional tic tac toe game | 
 
 ##  What I Learned
