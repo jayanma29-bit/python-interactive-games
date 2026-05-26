@@ -313,6 +313,3 @@ def game_choice():
 
 game_choice()
 
-#this is me testing the commit feature of git, ignore this comment.
-
-#test
