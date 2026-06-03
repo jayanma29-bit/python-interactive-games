@@ -12,6 +12,7 @@ This was my very first python project made which focuses on core concepts such a
 | 4 | **Coordinate Difference** | Calculate the distance between two points on a coordinate plane |
 | 5 | **Game of Pig** | Dice game vs. the computer the first to 100 points wins |
 | 6 | **Tic Tac Toe** | Traditional tic tac toe game | 
+| 7| **iTunes Song Search** | Using Apple's integrated API | 
 
 ##  What I Learned
 
@@ -20,6 +21,7 @@ This was my very first python project made which focuses on core concepts such a
 - Using while loops for game logic
 - Working with Python's random and math modules
 - Building a simple menu-driven program flow
+- Partial JSON file handling. 
 
 ---
 
