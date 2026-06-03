@@ -1,8 +1,8 @@
 import math
 import random 
 import time
+import requests
 
-#test 
 
 print("-----------------Choose a game!-----------------")
 
@@ -245,6 +245,57 @@ def tic_tac_toe():
             else:
                 turn = "x"
 
+def album_search():
+    print("iTunes Song Search ")
+    print("Type exit or quit to stop the program.\n")
+
+    while True:
+
+        search_term = input("Enter a artist or song name: ").strip()
+        search_term = search_term.lower()
+        if search_term in ['exit', 'quit']:
+            print("Goodbye!")
+            break
+            
+        if not search_term:
+            continue
+
+        try:
+            response = requests.get(f"https://itunes.apple.com/search?entity=song&limit=100&term={search_term}")
+            response.raise_for_status()  # Check for HTTP errors
+            
+            o = response.json()
+            
+            if not o["results"]:
+                print(f"No songs found for '{search_term}'. Try again.\n")
+                continue
+                
+            seen_songs = set()
+            print(f"\nResults for '{search_term}':")
+            
+            for result in o["results"]:
+                track = result.get('trackName', 'Unknown Title')
+                artist = result.get('artistName', 'Unknown Artist')
+                
+                unique_identifier = (track.lower(), artist.lower())
+                
+                if unique_identifier not in seen_songs:
+                    print(f"{o['results'].index(result) + 1}. {track} by {artist}")
+                    seen_songs.add(unique_identifier)
+
+            print("\n" + "="*40 + "\n")  
+            
+        except requests.RequestException as e:
+            print(f"An error occurred fetching the data: {e}\n")
+
+        end = input("Do you want to search for another song? (yes or no): ").strip().lower()
+        if end not in ['yes', 'y']:
+            print("Goodbye!")
+            break
+        if end in ['yes', 'y']:
+            continue
+
+
 def post_game_menu():
     time.sleep(5)
     print("\nWhat would you like to do next?\n")
@@ -264,7 +315,8 @@ def game_choice():
                 "(3.) Even or Odd\n" \
                 "(4.) Game of Pigs\n" \
                 "(5.) Coordinate Difference\n"
-                "(6.) Tic Tac Toe\n\n"
+                "(6.) Tic Tac Toe\n"
+                "(7.) Album Search\n\n"
                 "Enter the number: ").strip().lower()
 
             if user_input in ["1", "one"]:
@@ -286,6 +338,9 @@ def game_choice():
                 last_game = cord_diff
             elif user_input in ["6", "six"]:
                 last_game = tic_tac_toe
+            elif user_input in ["7", "seven"]:
+                last_game = album_search
+
 
                 
 
