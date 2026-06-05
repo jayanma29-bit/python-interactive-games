@@ -3,8 +3,7 @@ import random
 import time
 import requests
 
-#testing multiple repos in VS
-
+#test
 print("-----------------Choose a game!-----------------")
 
 
