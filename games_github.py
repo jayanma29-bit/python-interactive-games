@@ -3,7 +3,6 @@ import random
 import time
 import requests
 
-#test
 print("-----------------Choose a game!-----------------")
 
 
