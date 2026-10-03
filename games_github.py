@@ -42,6 +42,7 @@ def game_caesar():
     else:
         print("\nInvalid operation.")
 
+
 def numb_guess():
 
     import random
@@ -78,6 +79,8 @@ def game_even_odd():
             break
         except ValueError:
             print("Please enter a valid integer (A number).\n")
+
+
 
 def game_of_pig(): 
     total_score = 0
@@ -146,7 +149,6 @@ def game_of_pig():
             
         turn_number += 1
 
-    # --- END GAME ---
     print("FINAL SCORE:")
     print(f"Player: {total_score} | Computer: {computer_score}")
 
@@ -156,6 +158,8 @@ def game_of_pig():
         print("The computer won. Better luck next time!")
     else:
         print("It's a tie!")
+
+        
 #BETA!!!
 def cord_diff():
     def distance(first_point, second_point):
@@ -261,7 +265,7 @@ def album_search():
 
         try:
             response = requests.get(f"https://itunes.apple.com/search?entity=song&limit=100&term={search_term}")
-            response.raise_for_status()  # Check for HTTP errors
+            response.raise_for_status()
             
             o = response.json()
             
@@ -296,7 +300,7 @@ def album_search():
 
 
 def post_game_menu():
-    time.sleep(5)
+    time.sleep(2)
     print("\nWhat would you like to do next?\n")
     print("(1) Play the same game again\n")
     print("(2) Choose a different game\n")
